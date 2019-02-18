@@ -1,0 +1,27 @@
+body,ul,ol{margin:0;padding:0;}
+li{ list-style:none;}
+img{ border:none; vertical-align:top; }
+.box{width:520px;height:280px; position:relative; margin:100px auto; overflow:hidden}
+.box ul{ width:520px; position:absolute;left:0; top:0; z-index:1;}
+.box ul li{width:520px; position:absolute; top:0;}
+.nav{width:100%; position:absolute;bottom:10px;height: 20px;z-index:2;}
+.nav ol{ width: 120px;margin: 0 auto;height: 20px;}
+ol li{ width:20px;height:20px; float:left;margin:0 2px;
+    display:inline; background:#fff; color:#f60; line-height:20px;
+    text-align:center;cursor: pointer;
+}
+.nav ol .active{ background:#f60; color:#fff;}
+.box .leftCursor{width: 30px;height: 40px;position: absolute;left: 10px;z-index: 99;text-align: center;
+    line-height: 40px;color: #fff;background-color: rgba(0,0,0,0.5);cursor: pointer;font-size: 14px;font-weight: 400;
+    display: none;
+}
+.box .rightCursor{width: 30px;height: 40px;position: absolute;right: 10px;z-index: 99;text-align: center;
+    line-height: 40px;color: #fff;background-color: rgba(0,0,0,0.5);cursor: pointer;font-size: 14px;font-weight: 400;
+    display: none;
+}
+.box:hover .leftCursor{
+    display: block;
+}
+.box:hover .rightCursor{
+    display: block;
+}

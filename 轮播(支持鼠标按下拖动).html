@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头轮播</title>
+    <link rel="stylesheet" href="css/carousel2.css"/>
+    <script src='jquery-3.1.0.min.js'></script>
+</head>
+<style>
+     ol li{
+	    border-radius:50% 
+	 }
+</style>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="images/01.jpg" alt=""/></li>
+        <li><img src="images/02.jpg" alt=""/></li>
+        <li><img src="images/03.jpg" alt=""/></li>
+        <li><img src="images/04.jpg" alt=""/></li>
+        <li><img src="images/05.jpg" alt=""/></li>
+    </ul>
+</div>
+<hr/>
+<div class="box">
+    <ul>
+        <li><img src="images/01.jpg" alt=""/></li>
+        <li><img src="images/02.jpg" alt=""/></li>
+        <li><img src="images/03.jpg" alt=""/></li>
+        <li><img src="images/04.jpg" alt=""/></li>
+        <li><img src="images/05.jpg" alt=""/></li>
+    </ul>
+</div>
+<script src="js/carousel2.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.box').each(function (index,element) {
+            if(index%2==0){
+                $(this).carousel({
+                    autoPlay:true, //是否支持轮播自动播放,默认支持
+                    supportNextPre: false, //是否支持左右按钮控制轮播，默认支持
+                    supportDrag: false, //是否支持按住轮播进行拖拽，默认支持
+                    autoSpeed: 2000 //自动轮播的速度，默认为4秒
+                });
+            }else if(index%2!=0){
+                $(this).carousel({
+                    autoPlay:true, //自否支持轮播自动播放,默认支持
+                    supportNextPre: true, //是否支持左右按钮控制轮播，默认支持
+                    supportDrag: true, //是否支持按住轮播进行拖拽，默认支持
+                    autoSpeed: 2000 //自动轮播的速度，默认为4秒
+                });
+            }
+
+        })
+    })
+</script>
+</body>
+</html>
